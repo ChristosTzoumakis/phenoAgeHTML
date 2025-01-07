@@ -23,4 +23,5 @@ run the index.html.
 
 I have tested it on my Desktop as well as on my mobile phone with a
 sample from point 4("Association of ...."). Calculation formula based
-on the short form of the point 3("Correction: ....")
+on the short form of the point 3("Correction: ...."). The application
+runs standalone with bootstrap5 minimized libraries included in the package.
