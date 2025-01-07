@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="keywords"
+      content="phenoAge, biomarker, lifespan, healthspan, aging, geroscience, phenotypic"
+    />
+    <meta name="author" content="Christos" />
+
+    <title>PhenoAgeHTML application v003</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- phenoAge application -->
+      <h4>
+        <img
+          src="assets/prescription2.svg"
+          alt="Bootstrap"
+          width="16"
+          height="16"
+        />
+        <strong>PhenoAgeHTML application v003</strong>
+      </h4>
+      <h6><strong>PhenoAge(phenotypic age) is a biomarker of aging</strong></h6>
+      <h6>
+        <img
+        src="assets/keyboard-fill.svg"
+        alt="Bootstrap"
+        width="16"
+        height="16"
+      />
+        <strong
+          >Insert values in apropriate units and press
+          <bdi class="calcPhenoage"><img
+            src="assets/hand-thumbs-up.svg"
+            alt="Bootstrap"
+            width="16"
+            height="16"
+          />calculate</bdi>. Optionally press
+          <bdi class="fillSample">
+            <img
+        src="assets/eyedropper.svg"
+        alt="Bootstrap"
+        width="16"
+        height="16"
+      />fillWithSample</bdi> to import a
+          <a href="#sampleCitationLink" class="sampleCitationAnchor">sample</a>
+          values</strong
+        >
+      </h6>
+
+      <form>
+        <img
+          src="assets/keyboard-fill.svg"
+          alt="Bootstrap"
+          width="16"
+          height="16"
+        />
+        <label id="label_Albumin" class="sel_label"
+          >1 Enter value for Albumin (g/L)</label
+        ><br />
+        <input
+          type="text"
+          name="Albumin"
+          id="input_Albumin"
+          class="sel_input"
+        /><br />
+        <img
+          src="assets/keyboard-fill.svg"
+          alt="Bootstrap"
+          width="16"
+          height="16"
+        />
+        <label id="label_Creatinine" class="sel_label"
+          >2 Enter value for Creatinine (umol/L)</label
+        ><br />
+        <input
+          type="text"
+          name="Creatinine"
+          id="input_Creatinine"
+          class="sel_input"
+        /><br />
+        <img
+          src="assets/keyboard-fill.svg"
+          alt="Bootstrap"
+          width="16"
+          height="16"
+        />
+        <label id="Glucose_serum" class="sel_label"
+          >3 Enter value for Glucose serum (mmol/L)</label
+        ><br />
+        <input
+          type="text"
+          name="Glucose_serum"
+          id="input_Glucose_serum"
+          class="sel_input"
+        /><br />
+        <img
+          src="assets/keyboard-fill.svg"
+          alt="Bootstrap"
+          width="16"
+          height="16"
+        />
+        <label id="C_reactive_protein" class="sel_label"
+          >4 Enter value for C_reactive_protein (mg/dL)</label
+        ><br />
+        <input
+          type="text"
+          name="C_reactive_protein"
+          id="input_C_reactive_protein"
+          class="sel_input"
+        /><br />
+        <img
+          src="assets/keyboard-fill.svg"
+          alt="Bootstrap"
+          width="16"
+          height="16"
+        />
+        <label id="Lymphocyte_percent" class="sel_label"
+          >5 Enter value for Lymphocyte_percent (%)</label
+        ><br />
+        <input
+          type="text"
+          name="Lymphocyte_percent"
+          id="input_Lymphocyte_percent"
+          class="sel_input"
+        /><br />
+        <img
+          src="assets/keyboard-fill.svg"
+          alt="Bootstrap"
+          width="16"
+          height="16"
+        />
+        <label id="Mean_red_cell_volume" class="sel_label"
+          >6 Enter value for Mean (red) cell volume (fL)</label
+        ><br />
+        <input
+          type="text"
+          name="Mean_red_cell_volume"
+          id="input_Mean_red_cell_volume"
+          class="sel_input"
+        /><br />
+        <img
+          src="assets/keyboard-fill.svg"
+          alt="Bootstrap"
+          width="16"
+          height="16"
+        />
+        <label id="Red_cell_distribution_width" class="sel_label"
+          >7 Enter value for Red cell distribution width (%)</label
+        ><br />
+        <input
+          type="text"
+          name="Red_cell_distribution_width"
+          id="input_Red_cell_distribution_width"
+          class="sel_input"
+        /><br />
+        <img
+          src="assets/keyboard-fill.svg"
+          alt="Bootstrap"
+          width="16"
+          height="16"
+        />
+        <label id="Alkaline_phosphatase" class="sel_label"
+          >8 Enter value for Alkaline phosphatase (U/L)</label
+        ><br />
+        <input
+          type="text"
+          name="Alkaline_phosphatase"
+          id="input_Alkaline_phosphatase"
+          class="sel_input"
+        /><br />
+        <img
+          src="assets/keyboard-fill.svg"
+          alt="Bootstrap"
+          width="16"
+          height="16"
+        />
+        <label id="White_blood_cell_count" class="sel_label"
+          >9 Enter value for White blood cell count (1000 cells/uL)</label
+        ><br />
+        <input
+          type="text"
+          name="White_blood_cell_count"
+          id="input_White_blood_cell_count"
+          class="sel_input"
+        /><br />
+        <img
+          src="assets/keyboard-fill.svg"
+          alt="Bootstrap"
+          width="16"
+          height="16"
+        />
+        <label id="Age" class="sel_label">10 Enter value for Age (Years)</label
+        ><br />
+        <input type="text" name="Age" id="input_Age" class="sel_input" /><br />
+      </form>
+      <br />
+
+      <button class="calcPhenoage" onclick="htmlCallcalculatePhenoAge()">
+        <img
+          src="assets/hand-thumbs-up.svg"
+          alt="Bootstrap"
+          width="16"
+          height="16"
+        />
+        calculate
+      </button>
+      <button class="fillSample" onclick="htmlCallfillWithSample()">
+        <img
+        src="assets/eyedropper.svg"
+        alt="Bootstrap"
+        width="16"
+        height="16"
+      />
+        fillWithSample
+      </button>
+      <div class="divmsg" id="divMsgID">
+        <p contenteditable="true" id="parMsgID"></p>
+      </div>
+
+      <div class="divcopywrite" id="divcopywrite">
+        <h4 class="divcopywrite" id="copywriteMsgID">
+          created by Christos christostz<img
+            src="assets/envelope.svg"
+            alt="Bootstrap"
+            width="16"
+            height="16"
+          />protonmail.com 2024<br />
+          with Visual Studio Code Insiders using bootstrap5
+        </h4>
+      </div>
+      <div class="divcitation" id="divitation">
+        <h3 class="divcitation">
+          <img
+            src="assets/info-circle.svg"
+            alt="Bootstrap"
+            width="16"
+            height="16"
+          />
+          based on:
+        </h3>
+        <ul class="divcitation">
+          <li>
+            <a target="_blank" href="https://doi.org/10.18632/aging.101414"
+              >An epigenetic biomarker of aging for lifespan and healthspan</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://doi.org/10.1371/journal.pmed.1002718"
+              >A new aging measure captures morbidity and mortality risk across
+              diverse subpopulations from NHANES IV: A cohort study</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://doi.org/10.1371/journal.pmed.1002760"
+              >Correction: A new aging measure captures morbidity and mortality
+              risk across diverse subpopulations from NHANES IV: A cohort
+              study</a
+            >
+          </li>
+          <li>
+            <a
+              id="sampleCitationLink"
+              class="sampleCitationAnchor"
+              target="_blank"
+              href="http://doi.org/10.1016/j.jnha.2024.100405"
+              >Association of phenotypic age and accelerated aging with severity
+              and disability in patients with acute ischemic stroke</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!end of resposiviness in bootstrap>
+
+    <script type="text/javascript" src="bootstrap.min.js" defer></script>
+    <script type="text/javascript" src="phenoAgeFormulas.js" defer></script>
+  </body>
+</html>
