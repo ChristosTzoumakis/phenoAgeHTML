@@ -1,5 +1,5 @@
 # phenoAge
-This is a web application implemented with HTML, Javascript and Bootstrap5.
+This is a web application implemented with HTML, Javascript, CSS and Bootstrap5.
 Actually it calculates a phenotypic age based on the following documents:
 
 1) "An epigenetic biomarker of aging for lifespan and healthspan"
