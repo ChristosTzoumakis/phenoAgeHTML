@@ -22,4 +22,5 @@ The instalation is very simple. Just unpack the compressed file and
 run the index.html.
 
 I have tested it on my Desktop as well as on my mobile phone with a
-sample from point 4("Association of ....")
+sample from point 4("Association of ...."). Calculation formula based
+on the short form of the point 3("Correction: ....")
