@@ -25,4 +25,5 @@ I have tested it on my Desktop as well as on my mobile phone with a
 sample from point 4("Association of ...."). Calculation formula based
 on the short form of the point 3("Correction: ...."). The application
 runs standalone with bootstrap5 minimized libraries included in the package.
-Application developed with Visual Studio Code - Insiders.
+Application developed with Visual Studio Code - Insiders. It is a pure
+front end application and it does not require any server backend for calculations.
